@@ -1,0 +1,15 @@
+env:
+  global:
+    - ROLE_NAME: simplehttp
+  matrix:
+    - distro: centos7
+      init: /usr/lib/systemd/systemd
+      run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+
+services:
+  - docker
+
+install:
+  - docker build -t bassualdo/centosvagrantbase .
+
+script:
