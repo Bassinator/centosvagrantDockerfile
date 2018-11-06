@@ -10,6 +10,8 @@ services:
   - docker
 
 install:
-  - docker build -t bassualdo/centosvagrantbase .
+  - docker build -t centosvagrantbase .
+  - docker run -d --name centosvagrantbase centosvagrantbase
 
 script:
+  - docker ps | grep -q centosvagrantbase
