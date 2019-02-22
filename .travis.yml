@@ -1,6 +1,4 @@
 env:
-  global:
-    - ROLE_NAME: simplehttp
   matrix:
     - distro: centos7
       init: /usr/lib/systemd/systemd
